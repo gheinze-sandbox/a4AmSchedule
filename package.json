@@ -1,0 +1,11 @@
+{
+  "name": "a4amschedulefirefoxaddon",
+  "title": "Accounted4 Amortization Calculator",
+  "id": "jid1-F7S9LwIqAdK7tA",
+  "description": "Generate an Amortization Schedule for loan re-payments",
+  "author": "Glenn Heinze <glenn@gheinze.com>",
+  "icon": "data/A4-32.png",
+  "icon64": "data/A4-64.png",
+  "license": "MPL 2.0",
+  "version": "0.1"
+}
