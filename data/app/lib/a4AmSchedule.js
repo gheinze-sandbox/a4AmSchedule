@@ -157,7 +157,7 @@ var a4AmSchedule = (function () {
             payment.paymentNumber = paymentNumber;
             payment.date = _calcMonthsNoRollover(amAttrs.adjustmentDate, paymentNumber);
             payment.interest = balance * j;
-            payment.principal = thePayment - payment.interest + overpayment;
+            payment.principal = thePayment - payment.interest;
             balance = balance - payment.principal;
             payment.balance = balance;
             
