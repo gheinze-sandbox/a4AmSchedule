@@ -141,16 +141,14 @@ var a4AmSchedule = (function () {
             thePayment = monthlyPayment;
         }
         
-        var overpayment = thePayment - monthlyPayment;
+        // var overpayment = thePayment - monthlyPayment;
 
-        //
-        
 
         var paymentList = [];
         
         var j = _getPeriodRate(amAttrs.interestRate, amAttrs.compoundingPeriodsPerYear);
 
-        for (paymentNumber = 1; paymentNumber <= amAttrs.termInMonths; paymentNumber++) {
+        for (paymentNumber = 1; paymentNumber <= amAttrs.termInMonths && balance > 0; paymentNumber++) {
             
             var payment = {};
             
@@ -158,6 +156,9 @@ var a4AmSchedule = (function () {
             payment.date = _calcMonthsNoRollover(amAttrs.adjustmentDate, paymentNumber);
             payment.interest = balance * j;
             payment.principal = thePayment - payment.interest;
+            if (payment.principal > balance) {
+                payment.principal = balance;
+            }
             balance = balance - payment.principal;
             payment.balance = balance;
             

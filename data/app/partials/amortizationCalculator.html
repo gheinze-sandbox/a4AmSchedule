@@ -92,7 +92,7 @@
         <div class="control-group">
             <label class="control-label" for="amount">Mortgage Amount:</label>
             <div class="controls">
-                <input class="span2" id="amount" type="number" size="30"
+                <input class="span2" id="amount" type="number" size="30" step="0.01"
                        placeholder="mortgage amount"
                        data-ng-model="formModel.amount"
                        required /> 
@@ -112,7 +112,7 @@
         <div class="control-group">
             <label class="control-label" for="monthlyPayment">Monthly Payment:</label>
             <div class="controls">
-                <input class="span2" id="monthlyPayment" type="number" size="30"
+                <input class="span2" id="monthlyPayment" type="number" size="30" step="0.01"
                        placeholder="monthly payment"
                        data-ng-model="formModel.monthlyPayment" /> 
                 <button class="btn btn-mini btn-primary"
